@@ -1,0 +1,7 @@
+# Prompts
+(panorama:1.2),absurdres,looking_at_viewer,night sky,bedroom,game cg,Volumetric Lighting,(1girl:2),teen,(black hair:1.9),(short hair:1.5),long hair,crossed bangs,ahoge,(red eyes:1.3),bright_pupils,goat ears,(demon ears:0.8),medium breasts,serafuku,black legwear,sneakers,long_sleeves,(black-framed_eyewear:1.4),(star_earrings:1.1),hair_flower,hair_bobbles,(metal collar:1.4),expressionless,v_arms,standing,bed,desk,
+
+# Negative Prompts
+(NSFW:2),(text:1.5),EasyNegativeV2,badhandv4,
+
+# Prompts被我改了，跑不出现在的样子的说捏

@@ -1,0 +1,244 @@
+/* 全局的CSS */
+
+:root {
+    --mobile-zoom-val: 0.7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: calc(1.6rem * var(--mobile-zoom-val));
+}
+
+a:link {
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+a:active {
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #000000;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* 背景图比例适配 */
+
+@media (max-aspect-ratio: 1/1) {
+    body {
+        background-image: url(/assets/img/bg/H.webp);
+        background-position: center 0;
+    }
+
+    :root {
+        --mobile-zoom-val: 0.75;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    body {
+        background-image: url(/assets/img/bg/W.webp);
+        background-position: 0 0;
+    }
+}
+
+/* 标题大小 */
+
+h1 {
+    font-size: calc(2.8rem * var(--mobile-zoom-val));
+}
+
+h2 {
+    font-size: calc(2.5rem * var(--mobile-zoom-val));
+}
+
+h3 {
+    font-size: calc(2.25rem * var(--mobile-zoom-val));
+}
+
+h4 {
+    font-size: calc(2.0rem * var(--mobile-zoom-val));
+}
+
+h5 {
+    font-size: calc(1.9rem * var(--mobile-zoom-val));
+}
+
+h6 {
+    font-size: calc(1.8rem * var(--mobile-zoom-val));
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    background-color: #000000C0;
+    width: 0.25rem;
+    border: 0 solid 0;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    height: 1rem;
+    background-color: #808080;
+    border: 0 solid 0;
+    border-radius: 4px;
+}
+
+/* 主页面容器 */
+
+div.Main {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    min-height: 100vh;
+    background-color: #000000A0;
+}
+
+/* 小图片，设置好就不要动了 */
+
+.titleIcon {
+    background-image: url(/assets/img/IconSet/iconLittleSet.webp);
+    display: inline-block;
+    background-size: cover;
+    height: calc(2.2em * var(--mobile-zoom-val));
+    width: calc(2.2em * var(--mobile-zoom-val));
+}
+
+.titleIcon.i1 {
+    background-position-x: 0;
+}
+
+.titleIcon.i2 {
+    background-position-x: calc(var(--mobile-zoom-val) * 265px);
+}
+
+.titleIcon.i3 {
+    background-position-x: calc(var(--mobile-zoom-val) * 530px);
+}
+
+.titleIcon.i4 {
+    background-position-x: calc(var(--mobile-zoom-val) * 805px);
+}
+
+.titleIcon.i5 {
+    background-position-x: calc(var(--mobile-zoom-val) * 1080px);
+}
+
+/* 导航栏 */
+nav {
+    /* 基本形状 */
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: calc(100% - 0.5rem * 2);
+    height: 2.4rem;
+
+    /* 容器布局 */
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+
+nav>span {
+    position: relative;
+    left: 0;
+    display: flex;
+}
+
+nav>span img {
+    position: relative;
+    width: calc(4rem * var(--mobile-zoom-val) * 1.8);
+    height: calc(4rem * var(--mobile-zoom-val) * 1.8);
+}
+
+nav>span span {
+    position: relative;
+    font-size: calc(var(--mobile-zoom-val) * 2.8rem);
+}
+
+nav>span~span {
+    flex: auto;
+}
+
+nav>span~span.siteMap {
+    position: relative;
+    text-align: center;
+    justify-content: end;
+}
+
+div.navBottom {
+    position: sticky;
+    top: 2.9rem;
+    display: block;
+    height: 2px;
+    margin-left: 5%;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #808080;
+}
+
+div.Container {
+    min-height: calc(100vh - 6rem);
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+}
+
+div.Container p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    /* 外围装饰 */
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: calc(100% - 0.5rem * 2);
+    height: 2.4rem;
+    border-top: 2px solid #808080;
+}
+
+div.rightSide {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 15%;
+    background-color: #000000A0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: calc(100vh - 2 * (2.9rem + 2px));
+    border: 2px solid #808080;
+    border-radius: 1rem;
+    z-index: 99999;
+}
+
+div.leftSide {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 80%;
+    background-color: #000000A0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: calc(100vh - 2 * (2.9rem + 2px));
+    border: 2px solid #808080;
+    border-radius: 1rem;
+    z-index: 99999;
+}
+
+
