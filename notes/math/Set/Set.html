@@ -49,7 +49,6 @@
         })
     DataIO.FetchText('./note.md')
         .then(text => {
-            console.log(text)
             elem = document.getElementById('noteSide')
             elem.innerHTML = text
             renderMathInElement(document.getElementById('noteSide'), 

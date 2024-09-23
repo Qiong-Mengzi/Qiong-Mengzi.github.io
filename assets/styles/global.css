@@ -56,27 +56,33 @@ body {
 
 /* 标题大小 */
 
-h1 {
+h1,
+h1 a {
     font-size: calc(2.8rem * var(--mobile-zoom-val));
 }
 
-h2 {
+h2,
+h2 a {
     font-size: calc(2.5rem * var(--mobile-zoom-val));
 }
 
-h3 {
+h3,
+h3 a {
     font-size: calc(2.25rem * var(--mobile-zoom-val));
 }
 
-h4 {
+h4,
+h4 a {
     font-size: calc(2.0rem * var(--mobile-zoom-val));
 }
 
-h5 {
+h5,
+h5 a {
     font-size: calc(1.9rem * var(--mobile-zoom-val));
 }
 
-h6 {
+h6,
+h6 a {
     font-size: calc(1.8rem * var(--mobile-zoom-val));
 }
 
@@ -87,6 +93,7 @@ h6 {
     border: 0 solid 0;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb {
     height: 1rem;
     background-color: #808080;
@@ -291,11 +298,14 @@ table {
     table-layout: auto;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #606060;
 }
 
-th, td {
+th,
+td {
     text-align: center;
 }
 
@@ -316,4 +326,9 @@ ref.answer {
 div.leftSide li,
 div.rightSide li {
     margin-left: 2em;
+}
+
+code {
+    background-color: #606060A0;
+    border-radius: 0.2rem;
 }
