@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Wished Notes Template</title>
+    <title>集合</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=500, initial-scale=1" />
 
@@ -30,7 +30,6 @@
         <div class="rightSide" id="directory"></div>
         <div class="leftSide" id="noteSide"></div>
         <div class="Container" id="Container">
-
         </div>
         <footer>
             <p>Copyright &copy; 2024 Qiong-Mengzi.</p>
@@ -48,10 +47,17 @@
             elem.innerHTML = marked.parse(elem.innerHTML)
             document.getElementById('directory').innerHTML = marked.parse(directoryText)
         })
-    fetch('note.md')
-        .then(data=>data.text())
-        .then(text=>{
-            document.getElementById('noteSide').innerHTML += marked.parse(text)
+    DataIO.FetchText('./note.md')
+        .then(text => {
+            console.log(text)
+            elem = document.getElementById('noteSide')
+            elem.innerHTML = text
+            renderMathInElement(document.getElementById('noteSide'), 
+                {delimiters:[{ left: "$", right: "$", display: false }]})
+            elem.innerHTML = marked.parse(elem.innerHTML)
+            document.getElementById('noteSide').innerHTML = marked.parse(document.getElementById('noteSide').innerHTML)
+            document.getElementById('noteSide').innerHTML = '\
+            <div class="answerButton" onclick="SideChange.SideChangeByClass(\'answer\')">Show Answers</div>' + document.getElementById('noteSide').innerHTML
         })
 </script>
 

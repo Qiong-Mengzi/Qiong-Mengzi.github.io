@@ -190,9 +190,8 @@ div.navBottom {
 
 div.Container {
     min-height: calc(100vh - 6rem);
-    margin: 0.5rem;
-    margin-top: 1.5rem;
-    padding: 0.5rem;
+    margin: 1.5rem;
+    padding: 1.0rem;
 }
 
 div.Container p {
@@ -227,6 +226,23 @@ div.rightSide {
     z-index: 99999;
 }
 
+div.rightSide p,
+div.rightSide h1,
+div.rightSide h2,
+div.rightSide h3,
+div.rightSide h4,
+div.rightSide h5,
+div.rightSide h6,
+div.rightSide li {
+    margin: 0.5rem;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    div.rightSide {
+        width: 80%;
+    }
+}
+
 div.leftSide {
     display: none;
     position: fixed;
@@ -241,4 +257,63 @@ div.leftSide {
     z-index: 99999;
 }
 
+div.leftSide p,
+div.leftSide h1,
+div.leftSide h2,
+div.leftSide h3,
+div.leftSide h4,
+div.leftSide h5,
+div.leftSide h6,
+div.leftSide li {
+    margin: 0.5rem;
+}
 
+ref {
+    background-color: #00000080;
+    padding: 0.5rem;
+    margin: 1rem 0px;
+    border: 2px solid #808080;
+    border-radius: 8px;
+    display: block;
+}
+
+ref.warn {
+    background-color: #60000080;
+}
+
+ref.note {
+    background-color: #00206080;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+table, th, td {
+    border: 1px solid #606060;
+}
+
+th, td {
+    text-align: center;
+}
+
+div.answerButton {
+    background-color: #404040;
+    border: 1px solid #808080;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+    text-align: center;
+}
+
+ref.answer {
+    display: none;
+    padding: 0.5rem;
+}
+
+div.leftSide li,
+div.rightSide li {
+    margin-left: 2em;
+}
